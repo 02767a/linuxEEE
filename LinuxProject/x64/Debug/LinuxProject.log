@@ -1,0 +1,31 @@
+﻿빌드 시작: 2016-06-06 오후 12:20:45
+     1>2 노드의 "F:\linuxEEE\LinuxProject\LinuxProject.vcxproj" 프로젝트(Build 대상)입니다.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Shell.cpp
+         Shell.cpp
+     1>f:\linuxeee\linuxproject\directorymanager.h(41): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>f:\linuxeee\linuxproject\shell.cpp(196): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: 'strcpy' 선언을 참조하십시오.
+     1>f:\linuxeee\linuxproject\shell.cpp(373): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdlib.h(1316): note: 'itoa' 선언을 참조하십시오.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"F:\linuxEEE\LinuxProject\x64\Debug\LinuxProject.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"F:\linuxEEE\LinuxProject\x64\Debug\LinuxProject.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\linuxEEE\LinuxProject\x64\Debug\LinuxProject.lib" /MACHINE:X64 x64\Debug\BlockDescriptorTable.obj
+         x64\Debug\SuperBlock.obj
+         x64\Debug\CommonLibrary.obj
+         x64\Debug\DataBlock.obj
+         x64\Debug\Directory.obj
+         x64\Debug\DirectoryManager.obj
+         x64\Debug\Display.obj
+         x64\Debug\File.obj
+         x64\Debug\InodeBlock.obj
+         x64\Debug\main.obj
+         x64\Debug\FileSystem.obj
+         x64\Debug\PathManager.obj
+         x64\Debug\Shell.obj
+         x64\Debug\TableManager.obj
+         LinuxProject.vcxproj -> F:\linuxEEE\LinuxProject\x64\Debug\LinuxProject.exe
+     1>"F:\linuxEEE\LinuxProject\LinuxProject.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:00.86

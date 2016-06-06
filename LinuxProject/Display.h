@@ -23,5 +23,5 @@ public:
 
 	void displayInodeBlock(); //ºí·Ï4¹ø
 
-	void printBlockNum();
+	void printBlockNum(int bNum);
 };

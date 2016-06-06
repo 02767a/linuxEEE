@@ -40,5 +40,5 @@ public:
 	void caseOfSplitFile( char* filename );
 	void caseOfPasteFile( char* firstFile, char* secondFile );
 
-
+	void login();
 };	

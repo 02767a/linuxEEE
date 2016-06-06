@@ -135,8 +135,13 @@ char* PathManager::getCurrentPath()
 
 		while ((dir = tmp.pop()))
 		{
-			fullPath += dir;
-			fullPath += "/";
+			string s = dir;
+			reverse(begin(s), end(s));
+			
+			if (dir != "/" && !tmp.isEmpty()) {
+				fullPath += s;
+				fullPath += "/";
+			}
 		}
 		reverse(begin(fullPath), end(fullPath));
 		char *cstr = new char[fullPath.length() + 1];

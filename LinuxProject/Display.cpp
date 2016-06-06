@@ -17,7 +17,7 @@ void Display::displayFileDiscriptorTable()
 	cout << tb.getCount(FDT) << endl;
 
 	if (tb.getCount(FDT) == 3) {
-		cout << "추가 정보가 없습니다." << endl;
+		//cout << "추가 정보가 없습니다." << endl;
 		return;
 	}
 
@@ -156,13 +156,9 @@ void Display::displayInodeBlock()
 
 }
 
-void Display::printBlockNum()
+void Display::printBlockNum(int bNum)
 {
 	FileSystem &fs = *FileSystem::getInstance();
-	int bNum;
-
-	cout << "출력할 블록 번호 (0~4) : " ;
-	cin >> bNum;
 
 	if ( bNum == 0 )
 	{
@@ -186,8 +182,9 @@ void Display::printBlockNum()
 		// block5에 있는 정보도 같이 출력. 
 		displayInodeBlock();
 	}
-	else
+	else //데이터 블록 출력
 	{
+
 	}
 
 }

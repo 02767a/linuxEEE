@@ -5,22 +5,17 @@ const char* user_msg = "J4\0";
 
 void Shell::run()
 {
-	//Path Manager 초기화
-	//PathStack은 기본적으로 /home을 가짐
 	PathManager& pm = *PathManager::getInstance();
-	PathStack ps;
-	ps.push("/");
-	ps.push("home");
-	pm.setPathStack(ps);
-
+	login();
 	while (true)
 	{
 		char* path = pm.getCurrentPath();
 		cout << user_msg << "@" << emul_msg << ":";
-		if (path == "/home")
+		string p = path;
+		if (p == "/home")
 			cout << "~";
 		else
-			cout << path;
+			cout << p;
 		cout << "$";
 		string str = input();
 		if (str == "quit")
@@ -269,17 +264,13 @@ void Shell::processCmd(CmdList cl, vector<string>& param)
 			d;
 			if (param[1] == "t")
 			{
-				d.displaySystemFileTable();
-				d.displayInodeTable();
 				d.displayFileDiscriptorTable();
-				d.displaySuperBlock();
-				d.displayBlockDescriptorTable();
-				
-				
+				d.displaySystemFileTable();
+				d.displayInodeTable();				
 			}
 			else
 			{
-
+				d.printBlockNum(stoi(param[1]));
 			}
 		}
 		else cout << "error" << endl;
@@ -426,4 +417,23 @@ void Shell::caseOfPasteFile(char* firstFile, char* secondFile)
 {
 	File file;
 	file.pasteFile(firstFile, secondFile);
+}
+
+void Shell::login()
+{
+	cout << "--------------------------------------------" << endl;
+	cout << "-------------------login--------------------" << endl;
+	cout << "--------------------------------------------" << endl;
+
+	//Path Manager 초기화
+	//PathStack은 기본적으로 /home을 가짐
+	PathManager& pm = *PathManager::getInstance();
+	PathStack ps;
+	ps.push("/");
+	ps.push("home");
+	pm.setPathStack(ps);
+
+	cout << endl;
+	cout << "-----------------login success--------------" << endl;
+
 }
