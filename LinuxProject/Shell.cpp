@@ -115,6 +115,7 @@ void Shell::processCmd(CmdList cl, vector<string>& param)
 	case _pwd:
 		if (param.size() == 1)
 		{
+			display(pm.getCurrentPath());
 		}
 		else cout << "error" << endl;
 		break;
